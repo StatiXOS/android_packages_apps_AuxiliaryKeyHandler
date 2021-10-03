@@ -19,6 +19,7 @@
 
     <application android:label="@string/aux_button_title">
         <activity android:name=".ui.activity.AuxiliaryKeySettingsActivity"
+            android:exported="true"
             android:label="@string/aux_button_title"
             android:theme="@android:style/Theme.DeviceDefault.Settings">
             <intent-filter>

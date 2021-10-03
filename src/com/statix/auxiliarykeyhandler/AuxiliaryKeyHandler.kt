@@ -88,9 +88,10 @@ class AuxiliaryKeyHandler(private val context: Context) : DeviceKeyHandler {
         if (vibrator.hasVibrator()) vibrator.vibrate(VibrationEffect.get(effect))
     }
 
-    private fun getSelectedAction(): Int = Settings.System.getIntForUser(
+    private fun getSelectedAction(): Int = Settings.System.getInt(
         context.contentResolver,
         Settings.System.AUX_BUTTON,
-        USER_CURRENT
+        -1
     )
 }
+
